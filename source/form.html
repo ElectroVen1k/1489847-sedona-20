@@ -32,82 +32,72 @@
       <h1 class="main-form__title">Оставьте свой отзыв</h1>
       <p class="main-form__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещённых вами достопримечательностях</p>
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
-        <fieldset class="form__section section-person">
-          <legend class="section-person__title">Представьтесь</legend>
-          <div class="section-person__item">
-            <label for="first-name" >Имя*:</label>
-            <input class="section-person__first-name" type="text" name="Имя" id="first-name" placeholder="Петр">
+        <fieldset class="form__section fieldset">
+          <legend class="fieldset__title">Представьтесь</legend>
+          <div class="fieldset__item">
+            <label class="fieldset__label" for="first-name" >Имя*:</label>
+            <input class="fieldset__input" type="text" name="Имя" id="first-name" placeholder="Петр">
           </div>
-          <div class="section-person__item">
-            <label for="second-name">Фамилия*:</label>
-            <input class="section-person__second-name" type="text" name="Фамилия" id="second-name" placeholder="Иванов">
+          <div class="fieldset__item">
+            <label class="fieldset__label" for="second-name">Фамилия*:</label>
+            <input class="fieldset__input" type="text" name="Фамилия" id="second-name" placeholder="Иванов">
           </div>
-          <div class="section-person__item">
-            <label for="father-name">Отчество:</label>
-            <input class="section-person__father-name" type="text" name="Отчество" id="father-name" placeholder="Александрович">
-          </div>
-        </fieldset>
-        <fieldset class="form__section section-contacts">
-          <legend class="section-contacts__title">Контактная информация</legend>
-          <div class="section-contacts__item">
-            <label for="phone-number">Контактный телефон*:</label>
-            <input class="section-contacts" type="tel" id="" placeholder="Введите телефон" name="Номер телефона" >
-          </div>
-          <div class="section-contacts__item">
-            <label for="e-mail">Электронная почта*:</label>
-            <input class="section-contacts" type="email" id="e-mail" placeholder="Введите e-mail" name="e-mail">
+          <div class="fieldset__item">
+            <label class="fieldset__label" for="father-name">Отчество:</label>
+            <input class="fieldset__input" type="text" name="Отчество" id="father-name" placeholder="Александрович">
           </div>
         </fieldset>
-        <fieldset class="form__section section-impression">
-          <legend class="section-impression__title">Ваше общее впечатление:</legend>
-          <div class="section-impression__item">
-            <input class="section-impression__positiv" type="radio" id="positiv" name="Общее впечатление" value="Скорее положителное" checked>
-            <label for="positiv">Скорее положителное</label>
+        <fieldset class="form__section fieldset">
+          <legend class="fieldset__title">Контактная информация</legend>
+          <div class="fieldset__item">
+            <label class="fieldset__label" for="phone-number">Контактный телефон*:</label>
+            <input class="fieldset__input" type="tel" id="" placeholder="Введите телефон" name="Номер телефона" >
           </div>
-          <div class="section-impression__item">
-            <input class="section-impression__negativ" type="radio" id="negativ" name="Общее впечатление" value="Скорее отрицателное">
-            <label for="negativ">Скорее отрицателное</label>
-          </div>
-          <div class="section-impression__item">
-            <input class="section-impression__difficult-to-answer" type="radio" id="difficult-to-answer" name="Общее впечатление" value="Затрудняюсь ответить">
-            <label for="difficult-to-answer">Затрудняюсь ответить</label>
+          <div class="fieldset__item">
+            <label class="fieldset__label" for="e-mail">Электронная почта*:</label>
+            <input class="fieldset__input" type="email" id="e-mail" placeholder="Введите e-mail" name="e-mail">
           </div>
         </fieldset>
-        <fieldset class="form__section section-showplace">
-          <legend class="section-showplace__title">Посещенные вами достопримечательности:</legend>
-          <div class="section-showplace__item">
-            <input class="section-showplace__devil-bridge" type="checkbox" id="devil-bridge" name="Мост дьявола" checked>
-            <label for="devil-bridge">Мост Дьявола</label>
+        <fieldset class="form__section fieldset">
+          <legend class="fieldset__title">Ваше общее впечатление:</legend>
+          <div class="fieldset__item">
+            <input class="fieldset__input" type="radio" id="positiv" name="Общее впечатление" value="Скорее положителное" checked>
+            <label class="fieldset__label" for="positiv">Скорее положителное</label>
           </div>
-          <div class="section-showplace__item">
-            <input class="section-showplace__mountain-bell" type="checkbox" id="mountain-bell" name="Гора-Колокол" checked>
-            <label for="mountain-bell">Гора-Колокол</label>
+          <div class="fieldset__item">
+            <input class="fieldset__input" type="radio" id="negativ" name="Общее впечатление" value="Скорее отрицателное">
+            <label class="fieldset__label" for="negativ">Скорее отрицателное</label>
           </div>
-          <div class="section-showplace__item">
-            <input class="section-showplace__slaid-park" type="checkbox" id="slaid-park" name="Слайд-парк" checked>
-            <label for="slaid-park">Слайд-парк</label>
-          </div>
-          <div class="section-showplace__item">
-            <input class="section-showplace__rocks" type="checkbox" id="red-roks" name="Красные скалы">
-            <label for="red-roks">Красные скалы</label>
+          <div class="fieldset__item">
+            <input class="fieldset__input" type="radio" id="difficult-to-answer" name="Общее впечатление" value="Затрудняюсь ответить">
+            <label class="fieldset__label" for="difficult-to-answer">Затрудняюсь ответить</label>
           </div>
         </fieldset>
-        <fieldset class="form__section section-emotion">
-          <legend class="section-emotion__title">Опишите ваши эмоции:</legend>
-          <textarea name="Эмоции" id="emotion" rows="10" placeholder="Опишите подробно все ваши восторги"></textarea>
+        <fieldset class="form__section fieldset">
+          <legend class="fieldset__title">Посещенные вами достопримечательности:</legend>
+          <div class="fieldset__item">
+            <input class="fieldset__input" type="checkbox" id="devil-bridge" name="Мост дьявола" checked>
+            <label class="fieldset__label" for="devil-bridge">Мост Дьявола</label>
+          </div>
+          <div class="fieldset__item">
+            <input class="fieldset__input" type="checkbox" id="mountain-bell" name="Гора-Колокол" checked>
+            <label class="fieldset__label" for="mountain-bell">Гора-Колокол</label>
+          </div>
+          <div class="fieldset__item">
+            <input class="fieldset__input" type="checkbox" id="slaid-park" name="Слайд-парк" checked>
+            <label class="fieldset__label" for="slaid-park">Слайд-парк</label>
+          </div>
+          <div class="fieldset__item">
+            <input class="fieldset__input" type="checkbox" id="red-roks" name="Красные скалы">
+            <label class="fieldset__label" for="red-roks">Красные скалы</label>
+          </div>
         </fieldset>
-        <input class="form__send-button" type="submit" value="Отправить отзыв">
+        <fieldset class="form__section fieldset">
+          <legend class="fieldset__title">Опишите ваши эмоции:</legend>
+          <textarea class="fieldset__input" name="Эмоции" id="emotion" rows="10" placeholder="Опишите подробно все ваши восторги"></textarea>
+        </fieldset>
+        <button class="form__send-button" type="submit">Отправить отзыв</button>
       </form>
-      <div class="main-form__fail-popap fail-popup">
-        <h2 class="fail-popup__title">Что-то пошла не так!</h2>
-        <p class="fail-popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-        <button class="fail-popup__button" type="button">Ок</button>
-      </div>
-      <div class="main-form__success-popap success-popup">
-        <h2 class="success-popup__title">Ваш отзыв отправлен!</h2>
-        <p class="success-popup__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-        <button class="success-popup__button" type="button">Закрыть окно</button>
-      </div>
     </main>
     <footer class="footer">
       <p class="footer__hashtag">#VisitSedona</p>
@@ -135,5 +125,15 @@
         </a>
       </div>
     </footer>
+    <div class="fail-popup">
+      <h2 class="fail-popup__title">Что-то пошла не так!</h2>
+      <p class="fail-popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <button class="fail-popup__button" type="button">Ок</button>
+    </div>
+    <div class="success-popup">
+      <h2 class="success-popup__title">Ваш отзыв отправлен!</h2>
+      <p class="success-popup__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+      <button class="success-popup__button" type="button">Закрыть окно</button>
+    </div>
   </body>
 </html>
