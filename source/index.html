@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
   </head>
   <body class="page__body">
     <header class="header">
@@ -28,13 +30,13 @@
     <main class="main">
       <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
       <section class="main__intro intro">
-        <img class="intro__picture" src="" width="901" width="389" alt="Прекрасный вид Седоны">
+        <img class="intro__picture" src="" width="901" height="389" alt="Прекрасный вид Седоны">
         <h2 class="intro__title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
-        <p class="intro__text">Рассмотрим несколько причин, по которым Седона круче,чем Гранд Каньон!</p>
+        <p class="intro__text">Рассмотрим 5 причин, по которым Седона круче,чем Гранд Каньон!</p>
       </section>
       <section class="main__reasons reasons">
         <ul class="reasons__list">
-          <li class="reasons__item">
+          <li class="reasons__item reasons__item--important">
             <h3 class="reasons__title">Настоящий городок</h3>
             <p class="reasons__description">- №1 - <br>
             Седона не атракцион для туристов, там течет своя жизнь</p>
@@ -57,7 +59,7 @@
               </li>
             </ul>
           </li>
-          <li class="reasons__item">
+          <li class="reasons__item reasons__item--important">
             <h3 class="reasons__title">Там есть мост дьявола</h3>
             <p class="reasons__description">- №2 -<br>
             Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
@@ -93,25 +95,25 @@
       <p class="footer__hashtag">#VisitSedona</p>
       <ul class="footer__social social">
         <li class="social__item">
-          <a href="" aria-label="Страница в Твиттере">
-            <img src="" width="18" height="15" alt="">
+          <a class="social__link" href="" aria-label="Страница в Твиттере">
+            <img src="img/icon-twitter.svg" width="18" height="15" alt="">
           </a>
         </li>
         <li class="social__item">
-          <a href="" aria-label="Страница на FaceBook">
-            <img src="" width="9" height="19" alt="">
+          <a class="social__link" href="" aria-label="Страница на FaceBook">
+            <img src="img/icon-facebook.svg" width="9" height="19" alt="">
           </a>
         </li>
-        <li class="social_item">
-          <a href="" aria-label="Канал на YouTube">
-            <img src="" width="20" height="14" alt="">
+        <li class="social__item">
+          <a class="social__link" href="" aria-label="Канал на YouTube">
+            <img src="img/icon-youtube.svg" width="20" height="14" alt="">
           </a>
         </li>
       </ul>
       <div class="footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__logo" src="" width="27" height="34" alt="Html Academy">
+          <img class="copyright__logo" src="img/htmlacademy.svg" width="26" height="34" alt="Html Academy">
         </a>
       </div>
     </footer>
