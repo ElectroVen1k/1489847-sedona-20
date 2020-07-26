@@ -1,4 +1,25 @@
-@import "blocks/header.less";
+/* pt-sans-regular - latin_cyrillic */
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("PT Sans"),
+    local("PTSans-Regular"),
+    url("../fonts/ptsans.woff2") format("woff2"), /* Super Modern Browsers */
+    url("../fonts/ptsans.woff") format("woff"); /* Modern Browsers */
+}
+/* pt-sans-700 - latin_cyrillic */
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("PT Sans Bold"),
+    local("PTSans-Bold"),
+    url("../fonts/ptsansbold.woff2") format("woff2"), /* Super Modern Browsers */
+    url("../fonts/ptsansbold.woff") format("woff"); /* Modern Browsers */
+}
+
+@import "blocks/main-nav.less";
 @import "blocks/intro.less";
 @import "blocks/reasons.less";
 @import "blocks/features.less";
@@ -7,33 +28,13 @@
 @import "blocks/intro-photo.less";
 @import "blocks/pictures.less";
 @import "blocks/picture.less";
-
-body {
-  font-family: "PT Sans", "Arial", sans-serif;
-  text-transform: uppercase;
-  font-size: 18px;
-  line-height: 26px;
-  margin: 0 auto;
-  padding: 0;
-  width: 320px;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-a {
-  text-decoration: none;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
+@import "blocks/find-hostel.less";
+@import "blocks/variables.less";
+@import "blocks/video-presentation.less";
+@import "blocks/main-form.less";
+@import "blocks/fieldset.less";
+@import "blocks/global.less";
+@import "blocks/form.less";
+@import "blocks/success-popup.less";
+@import "blocks/fail-popup.less";
+@import "blocks/mixins.less";

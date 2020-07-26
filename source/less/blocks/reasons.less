@@ -4,14 +4,18 @@
   padding: 0;
 }
 
-.reasons__item {
-  padding: 35px 0;
-  background-color: #eeeeee;
+.reasons__text {
+  padding: 24px 0;
+  background-color: @gallery;
 }
 
-.reasons__item--important {
-  background-color: #81b3d2;
-  color: #ffffff;
+.reasons__text--important {
+  background-color: @half-baked;
+  color: @white;
+
+  .reasons__description {
+    color: @white;
+  }
 }
 
 .reasons__title,
@@ -26,9 +30,10 @@
 
 .reasons__description {
   font-size: 14px;
+  color: @mine-shaft;
 }
 
 .reasons__features {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: @white;
+  color: @black;
 }

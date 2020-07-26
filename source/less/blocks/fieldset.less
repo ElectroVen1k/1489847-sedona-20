@@ -1,0 +1,67 @@
+.fieldset {
+  border: none;
+  padding: 0;
+  margin: 50px 20px;
+}
+
+.fieldset__item {
+  margin-top: 20px;
+}
+
+.fieldset__title {
+  text-align: center;
+  font-weight: bold;
+}
+
+.fieldset__label {
+  font-size: 14px;
+  color: @mine-shaft;
+}
+
+.fieldset__label--radio,
+.fieldset__label--check {
+  font-size: 18px;
+  font-weight: bold;
+  color: @black;
+  text-transform: none;
+}
+
+.fieldset__input {
+  font-weight: bold;
+  color: @black;
+  height: 58px;
+  border: none;
+  background-color: @concrete;
+  margin-left: 12px;
+  padding: 0;
+  padding-left: 10px;
+}
+
+.fieldset__input::placeholder {
+  color: @black;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
+.fieldset__input--radio,
+.fieldset__input--check,
+.fieldset__input--textarea {
+  margin: 0;
+}
+
+.fieldset__input--radio,
+.fieldset__input--check {
+  height: auto;
+}
+
+.fieldset__input--textarea {
+  height: 160px;
+  width: 100%;
+  margin: 15px auto 0;
+  resize: none;
+  font-size: 18px;
+  line-height: 26px;
+  color: @black;
+}
