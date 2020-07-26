@@ -11,3 +11,28 @@
   line-height: 40px;
   font-weight: bold;
 }
+
+.main-nav__logo{
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__list {
+    background-color: @white;
+    display: flex;
+  }
+
+  .main-nav__link {
+    color: @black;
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .main-nav__item {
+    flex-grow: 1;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}

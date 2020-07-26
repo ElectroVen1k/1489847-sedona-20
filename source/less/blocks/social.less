@@ -1,5 +1,19 @@
 .social {
   list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.social__item {
+  margin-left: 6px;
+  margin-bottom: 6px;
+
+  &:nth-child(1) {
+    margin-left: 0;
+  }
 }
 
 .social__link {
@@ -7,7 +21,6 @@
   width: 46px;
   height: 48px;
   background-color: @half-baked;
-  margin-top: 5px;
   justify-content: center;
   align-items: center;
 }

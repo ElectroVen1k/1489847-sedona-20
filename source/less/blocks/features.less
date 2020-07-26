@@ -7,3 +7,17 @@
   line-height: 21px;
   color: @mine-shaft;
 }
+
+@media (min-width: @tablet-width) {
+  .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+    width: 100%;
+  }
+
+  .features__item {
+    text-align: center;
+  }
+}
+
