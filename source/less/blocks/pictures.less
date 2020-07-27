@@ -1,9 +1,45 @@
+.pictures {
+  display: flex;
+}
+
 .pictures__list {
   list-style: none;
+  display: block;
   padding: 0;
-  margin: 0 auto;
+  margin: 0 20px;
 }
 
 .pictures__item {
   margin-bottom: 20px;
+
+  &:first-child {
+    width: 100%;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .pictures__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 60px;
+  }
+
+  .pictures__item {
+    width: 50%;
+  }
+
+  .pictures__item:first-child .picture__photo {
+    max-height: 400px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .pictures__list {
+    width: 100%;
+    margin: 0;
+  }
+
+  .pictures__item {
+    width: 33.33%;
+  }
 }

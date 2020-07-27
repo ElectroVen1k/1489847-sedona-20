@@ -12,7 +12,35 @@
 
 .picture__maker {
   font-size: 14px;
+  font-weight: 400;
   text-transform: none;
   margin: 0;
   color: @mine-shaft;
+}
+
+
+@media (min-width: @tablet-width) {
+  .picture__text {
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .picture__photo {
+    display: block;
+    width: 100%;
+    max-height: 267px;
+  }
+
+  .picture__likes {
+    min-width: 53px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .picture__text {
+    background-color: @black-opacity;
+    mix-blend-mode: normal;
+  }
 }
