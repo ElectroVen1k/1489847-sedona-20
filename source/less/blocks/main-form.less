@@ -1,3 +1,7 @@
+.main-form {
+  margin: 0 20px;
+}
+
 .main-form__title {
   font-size: 18px;
   line-height: 26px;
@@ -9,4 +13,16 @@
   line-height: 24px;
   color: @mine-shaft;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .main-form {
+    margin: 0 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-form {
+    margin: 0 120px;
+  }
 }

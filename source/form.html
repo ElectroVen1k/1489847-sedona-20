@@ -51,13 +51,15 @@
         </fieldset>
         <fieldset class="form__section fieldset">
           <legend class="fieldset__title">Контактная информация:</legend>
-          <div class="fieldset__item">
-            <label class="fieldset__label" for="phone-number">Контактный телефон*:</label>
-            <input class="fieldset__input" type="tel" id="" placeholder="Введите телефон" name="Номер телефона" >
-          </div>
-          <div class="fieldset__item">
-            <label class="fieldset__label" for="e-mail">Электронная почта*:</label>
-            <input class="fieldset__input" type="email" id="e-mail" placeholder="Введите e-mail" name="e-mail">
+          <div class="fieldset__flex-wrapper--contact">
+            <div class="fieldset__item">
+              <label class="fieldset__label" for="phone-number">Контактный телефон*:</label>
+              <input class="fieldset__input" type="tel" id="" placeholder="Введите телефон" name="Номер телефона" >
+            </div>
+            <div class="fieldset__item">
+              <label class="fieldset__label" for="e-mail">Электронная почта*:</label>
+              <input class="fieldset__input" type="email" id="e-mail" placeholder="Введите e-mail" name="e-mail">
+            </div>
           </div>
         </fieldset>
         <fieldset class="form__section fieldset">
@@ -77,28 +79,34 @@
         </fieldset>
         <fieldset class="form__section fieldset">
           <legend class="fieldset__title">Посещенные достопримечательности:</legend>
-          <div class="fieldset__item">
-            <input class="fieldset__input fieldset__input--check" type="checkbox" id="devil-bridge" name="Мост дьявола" checked>
-            <label class="fieldset__label fieldset__label--check" for="devil-bridge">Мост Дьявола</label>
-          </div>
-          <div class="fieldset__item">
-            <input class="fieldset__input fieldset__input--check" type="checkbox" id="mountain-bell" name="Гора-Колокол" checked>
-            <label class="fieldset__label fieldset__label--check" for="mountain-bell">Гора-Колокол</label>
-          </div>
-          <div class="fieldset__item">
-            <input class="fieldset__input fieldset__input--check" type="checkbox" id="slaid-park" name="Слайд-парк" checked>
-            <label class="fieldset__label fieldset__label--check" for="slaid-park">Слайд-парк</label>
-          </div>
-          <div class="fieldset__item">
-            <input class="fieldset__input fieldset__input--check" type="checkbox" id="red-roks" name="Красные скалы">
-            <label class="fieldset__label fieldset__label--check" for="red-roks">Красные скалы</label>
+          <div class="fieldset__flex-wrapper--showplace">
+            <div class="fieldset__item">
+              <input class="fieldset__input fieldset__input--check" type="checkbox" id="devil-bridge" name="Мост дьявола" checked>
+              <label class="fieldset__label fieldset__label--check" for="devil-bridge">Мост Дьявола</label>
+            </div>
+            <div class="fieldset__item">
+              <input class="fieldset__input fieldset__input--check" type="checkbox" id="mountain-bell" name="Гора-Колокол" checked>
+              <label class="fieldset__label fieldset__label--check" for="mountain-bell">Гора-Колокол</label>
+            </div>
+            <div class="fieldset__item">
+              <input class="fieldset__input fieldset__input--check" type="checkbox" id="slaid-park" name="Слайд-парк" checked>
+              <label class="fieldset__label fieldset__label--check" for="slaid-park">Слайд-парк</label>
+            </div>
+            <div class="fieldset__item">
+              <input class="fieldset__input fieldset__input--check" type="checkbox" id="red-roks" name="Красные скалы">
+              <label class="fieldset__label fieldset__label--check" for="red-roks">Красные скалы</label>
+            </div>
           </div>
         </fieldset>
         <fieldset class="form__section fieldset">
           <legend class="fieldset__title">Опишите ваши эмоции:</legend>
           <textarea class="fieldset__input fieldset__input--textarea" name="Эмоции" id="emotion" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
-        <button class="form__send-button" type="submit">Отправить отзыв</button>
+        <div class="form__footer">
+          <div class="form__button-wrapper">
+            <button class="form__send-button" type="submit">Отправить отзыв</button>
+          </div>
+          <p class="form__footnote">* — обязательные поля</p>
       </form>
     </main>
     <footer class="footer">

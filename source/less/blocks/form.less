@@ -1,3 +1,37 @@
 .form__send-button {
   .button();
 }
+
+.form__footnote {
+  margin: 0;
+}
+
+@media (max-width: @mobile-width) {
+  .form__footnote {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 95px;
+  }
+
+  .form__footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form__send-button {
+    width: 324px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__send-button {
+    width: 480px;
+  }
+}
