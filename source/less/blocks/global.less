@@ -7,7 +7,7 @@ body {
   text-transform: uppercase;
   font-size: 18px;
   line-height: 26px;
-  margin: 0 auto 20px;
+  margin: 0 auto;
   padding: 0;
   min-width: 320px;
   max-width: 1200px;
@@ -31,4 +31,22 @@ a {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+@media (min-width: @tablet-width) {
+  .br-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: @desktop-width) {
+  .br-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  body {
+    box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+  }
 }

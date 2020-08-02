@@ -8,32 +8,36 @@
   </head>
   <body class="page__body">
     <header class="header">
-      <nav class="main-nav">
-        <a href="index.html">
-          <img class="main-nav__logo" src="" width="102" height="84" alt="Логотип Седона">
-        </a>
-        <button type="button" class="main-nav__toggle" aria-label="Переключение меню"></button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="index.html">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <aи class="main-nav__link">Фото и вlink-идео</aи видео<" >
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Форма отзыва</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="">Html Academy</a>
-          </li>
-        </ul>
+      <nav class="main-nav main-nav--opened">
+          <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link">Фото и видео</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Форма отзыва</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="">Html Academy</a>
+            </li>
+            <li class="main-nav__item main-nav__item--logo">
+              <a class="main-nav__link main-nav__link--logo" href="index.html">
+                <img class="main-nav__logo" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип Седона">
+              </a>
+            </li>
+          </ul>
+          <button type="button" class="main-nav__toggle" aria-label="Переключение меню"></button>
+        </div>
       </nav>
     </header>
     <main class="main-photo">
       <section class="intro-photo">
-        <img class="intro-photo__picture" src="" width="902" height="214" alt="Прекрасный вид Седоны">
+        <img class="intro-photo__picture" src="img/bg-back-mobile@1x.jpg" width="902" height="214" alt="Прекрасный вид Седоны">
         <h1 class="intro-photo__title">Фото и видео</h1>
-        <p class="intro-photo__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+        <p class="intro-photo__text">Не можете решиться на путешествие из-за курса?<br> Фотографии помогут вам забыть о политике и экономике.</p>
       </section>
       <section class="pictures">
         <ul class="pictures__list">
@@ -68,7 +72,7 @@
               <a class="picture__link-photo" href="">
                 <img class="picture__photo" src="img\photo-roads-mobile@1x.jpg" width="280" height="280" alt="Вид на серпантин">
               </a>
-              <figcaption class="picture__text">
+              <figcaption class="picture__text picture__text--another">
                 <p class="picture__name">Дорога на север<br>
                   <span class="picture__maker">Автор фото: Петр</span>
                 </p>
@@ -79,7 +83,7 @@
           <li class="pictures__item picture">
             <figure class="picture__content">
               <a class="picture__link-photo" href="">
-                <img class="picture__photo" src="img\main-bridge-mobile@1x.jpg" width="280" height="280" alt="Мост дьявола">
+                <img class="picture__photo" src="img\photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Мост дьявола">
               </a>
               <figcaption class="picture__text">
                 <p class="picture__name">Мост дьявола<br>
@@ -93,9 +97,9 @@
       </section>
       <section class="main-photo__video video-presentation">
         <h2 class="video-presentation__title">Все еще сомневаетесь?</h2>
-        <p class="video-presentation__text">Смотрите видео презентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-        <div class="video-presentation__video" >
-          <img src="img\video-mobile@1x.jpg" alt="">
+        <p class="video-presentation__text">Смотрите видео презентацию и скорее за билетами, пока они<br> не подорожали в очередной раз!</p>
+        <div class="video-presentation__video video" >
+          <img class="video__picture" src="img\video-mobile@1x.jpg" alt="">
         </div>
       </section>
     </main>
@@ -121,7 +125,7 @@
       <div class="footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__logo" src="img/htmlacademy.svg" width="26" height="34" alt="Html Academy">
+          <img class="copyright__logo" src="img/logo-htmlacademy.svg" width="26" height="34" alt="Html Academy">
         </a>
       </div>
     </footer>

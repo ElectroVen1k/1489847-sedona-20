@@ -1,24 +1,61 @@
 .find-hostel {
   text-align: center;
-  margin-bottom: 50px;
+  margin: 0 20px;
 }
 
 .find-hostel__title {
   font-size: 21px;
+  margin: 0;
+  margin-bottom: 21px;
+  margin-top: 33px;
 }
 
 .find-hostel__text {
   color: @mine-shaft;
   font-size: 14px;
   line-height: 24px;
+  margin: 0;
+  margin-bottom: 28px;
 }
 
 .find-hostel__button {
   .button();
+
+  margin-bottom: 50px;
+}
+
+@media (max-width: @mobile-width) {
+  .find-hostel__text br {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
+  .find-hostel {
+    margin-top: 56px;
+  }
+
+  .find-hostel__title {
+    font-size: 30px;
+    margin-bottom: 33px;
+  }
+
+  .find-hostel__text {
+    margin-bottom: 39px;
+  }
+
   .find-hostel__button {
     width: 458px;
+    margin-bottom: 58px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .find-hostel__text {
+    margin-bottom: 44px;
+  }
+
+  .find-hostel__button {
+    margin-bottom: 66px;
   }
 }

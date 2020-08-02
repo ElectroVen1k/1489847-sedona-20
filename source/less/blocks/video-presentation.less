@@ -3,9 +3,52 @@
   font-size: 14px;
   line-height: 24px;
   color: @mine-shaft;
+  margin-bottom: 137px;
 }
 
 .video-presentation__title {
   font-size: 18px;
   line-height: 26px;
+  margin-top: 12px;
+}
+
+.video-presentation__text {
+  margin: 28px 20px 34px;
+}
+
+@media (max-width: @mobile-width) {
+  .video-presentation__text br {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .video-presentation {
+    margin-bottom: 75px;
+  }
+
+  .video-presentation__title {
+    font-size: 30px;
+    margin-top: 57px;
+  }
+
+  .video-presentation__text {
+    margin-top: 33px;
+    margin-bottom: 80px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video-presentation {
+    margin-bottom: 121px;
+  }
+
+  .video-presentation__title {
+    margin-top: 61px;
+  }
+
+  .video-presentation__text {
+    margin-top: 33px;
+    margin-bottom: 78px;
+  }
 }

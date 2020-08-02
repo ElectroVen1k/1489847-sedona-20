@@ -6,26 +6,33 @@
   list-style: none;
   display: block;
   padding: 0;
-  margin: 0 20px;
+  margin: 0 auto;
 }
 
 .pictures__item {
   margin-bottom: 20px;
-
-  &:first-child {
-    width: 100%;
-  }
+  margin-top: 22px;
+  border-bottom: 1px solid @mercury;
+  padding-bottom: 16px;
+  box-sizing: border-box;
 }
 
 @media (min-width: @tablet-width) {
   .pictures__list {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 60px;
+    margin: 77px 60px 0;
   }
 
   .pictures__item {
+    margin: 0;
     width: 50%;
+    border: none;
+    padding: 0;
+
+    &:first-child {
+      width: 100%;
+    }
   }
 
   .pictures__item:first-child .picture__photo {

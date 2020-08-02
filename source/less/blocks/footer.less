@@ -1,29 +1,38 @@
 .footer {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 31px;
+  padding-bottom: 30px;
 }
 
 .footer__hashtag {
   font-weight: bold;
   font-size: 21px;
   margin: 0;
+  margin-bottom: 33px;
 }
 
 .footer__copyright {
   font-size: 14px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .footer {
-    margin: 0 60px;
+    margin: 29px 60px 0;
+    padding-bottom: 30px;
     display: grid;
     grid-template-columns: 150px 1fr 150px;
     align-items: center;
+  }
+
+  .footer__hashtag {
+    margin-bottom: 0;
+    margin-right: auto;
   }
 }
 
 @media (min-width: @desktop-width) {
   .footer {
-    margin: 0 120px;
+    margin: 29px 120px 0;
+    padding-bottom: 30px;
   }
 }

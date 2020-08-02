@@ -1,5 +1,5 @@
 .picture__content {
-  margin: 0;
+  margin: 0 20px;
 }
 
 .picture__name,
@@ -10,6 +10,15 @@
   margin: 0;
 }
 
+.picture__name {
+  margin-top: 3px;
+}
+
+.picture__likes {
+  margin-top: 14px;
+  margin-left: 37px;
+}
+
 .picture__maker {
   font-size: 14px;
   font-weight: 400;
@@ -18,6 +27,9 @@
   color: @mine-shaft;
 }
 
+.picture__photo {
+  width: 280px;
+}
 
 @media (min-width: @tablet-width) {
   .picture__text {
@@ -25,6 +37,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: @concrete;
+    padding-bottom: 17px;
+  }
+
+  .picture__text--another {
+    background-color: @gallery-light;
   }
 
   .picture__photo {
@@ -33,8 +51,17 @@
     max-height: 267px;
   }
 
+  .picture__name {
+    margin-top: 15px;
+  }
+
   .picture__likes {
     min-width: 53px;
+    margin-top: 18px;
+  }
+
+  .picture__content {
+    margin: 0;
   }
 }
 
@@ -42,5 +69,13 @@
   .picture__text {
     background-color: @black-opacity;
     mix-blend-mode: normal;
+    position: relative;
+    bottom: 80px;
+    margin-bottom: -80px;
+    color: @white;
+  }
+
+  .picture__maker {
+    color: @white;
   }
 }
