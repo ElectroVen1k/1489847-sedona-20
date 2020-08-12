@@ -1,0 +1,120 @@
+.player {
+  background-color: fade(@black, 60%);
+  height: 45px;
+  margin: 0 20px;
+  position: relative;
+  bottom: 45px;
+  margin-bottom: -111px;
+  border-bottom: 66px solid @concrete;
+}
+
+.player__progress-bar {
+  height: 3px;
+  width: 235px;
+  background-color: fade(@white, 20%);
+  position: relative;
+  left: 22px;
+  top: 22px;
+}
+
+.player__progress-bar::after {
+  content: "";
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: @white;
+  position: relative;
+  top: -3px;
+  left: 36px;
+  z-index: 2;
+}
+
+.player__button--replay {
+  position: absolute;
+  top: 67px;
+  left: 25px;
+}
+
+.player__button--subtitle {
+  position: absolute;
+  top: 68px;
+  right: 74px;
+}
+
+.player__button--fullscreen {
+  position: absolute;
+  top: 68px;
+  right: 23px;
+}
+
+.player__button path,
+.player__button polygon {
+  fill: @shuttle-gray;
+}
+
+.player__button:hover path,
+.player__button:hover polygon {
+  fill: @mine-shaft;
+}
+
+.player__button:active path,
+.player__button:active polygon {
+  fill: fade(@mine-shaft, 30%);
+}
+
+@media (min-width: @tablet-width) {
+  .player {
+    height: 93px;
+    border: none;
+    bottom: 93px;
+    margin: 0;
+    margin-bottom: -93px;
+  }
+
+  .player__progress-bar {
+    width: 389px;
+    top: 45px;
+    left: 93px;
+  }
+
+  .player__progress-bar::after {
+    left: 113px;
+  }
+
+  .player__button--replay {
+    top: 35px;
+    left: 35px;
+  }
+
+  .player__button--subtitle {
+    top: 36px;
+    right: 92px;
+  }
+
+  .player__button--fullscreen {
+    top: 36px;
+    right: 41px;
+  }
+
+  .player__button path,
+  .player__button polygon {
+    fill: @white;
+  }
+
+  .player__button:hover path,
+  .player__button:hover polygon {
+    fill: fade(@white, 60%);
+  }
+
+  .player__button:active path,
+  .player__button:active polygon {
+    fill: fade(@white, 30%);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .player__progress-bar {
+    width: 540px;
+  }
+}

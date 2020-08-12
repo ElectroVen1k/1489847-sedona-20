@@ -50,12 +50,52 @@
   .features__item--food {
     order: -2;
     margin: 0 50px;
+    position: relative;
   }
 
   .features__title {
     margin-top: 158px;
     font-size: 21px;
     margin-bottom: 23px;
+    margin-left: auto;
+    margin-right: auto;
+    width: min-content;
+  }
+
+  .features__title--house::after {
+    content: "";
+    background-image: url("../../img/icon-house.svg");
+    height: 100px;
+    width: 100px;
+    top: -112px;
+    left: -17px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+  }
+
+  .features__title--gift::after {
+    content: "";
+    background-image: url("../../img/icon-gift.svg");
+    height: 100px;
+    width: 100px;
+    top: -113px;
+    left: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+  }
+
+  .features__title--food::after {
+    content: "";
+    background-image: url("../../img/icon-burger.svg");
+    height: 100px;
+    width: 100px;
+    top: -112px;
+    left: -32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
   }
 }
 

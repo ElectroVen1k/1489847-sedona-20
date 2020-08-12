@@ -39,6 +39,17 @@
   }
 }
 
+.main-nav__link--logo {
+  &:hover {
+    background-color: @white;
+  }
+
+  &:active {
+    background-color: @white;
+    box-shadow: none;
+  }
+}
+
 .main-nav__wrapper {
   position: relative;
 }
@@ -54,6 +65,7 @@
   margin: 0 auto;
   position: relative;
   top: 13px;
+  z-index: 3;
 }
 
 .main-nav__toggle {
@@ -149,11 +161,39 @@
     color: @black;
     font-size: 14px;
     line-height: 26px;
+    width: auto;
+    height: auto;
+
+    &:hover {
+      background-color: @white;
+      color: @half-baked;
+    }
+
+    &:active {
+      box-shadow: none;
+      background-color: @white;
+      color: fade(@black, 30%);
+    }
+  }
+
+  .main-nav__link--active {
+    color: @pine-cone;
+
+    &:active {
+      color: fade(@pine-cone, 30%);
+    }
+
+    &:hover {
+      color: @kabul;
+    }
   }
 
   .main-nav__item {
     border: none;
     width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .main-nav__toggle {

@@ -17,6 +17,17 @@
 .picture__likes {
   margin-top: 14px;
   margin-left: 37px;
+  position: relative;
+}
+
+.picture__like {
+  position: absolute;
+  left: -36px;
+  top: -1px;
+
+  path {
+    fill: fade(@black, 30%);
+  }
 }
 
 .picture__maker {
@@ -60,6 +71,11 @@
     margin-top: 18px;
   }
 
+  .picture__like {
+    top: 0;
+    left: -32px;
+  }
+
   .picture__content {
     margin: 0;
   }
@@ -77,5 +93,13 @@
 
   .picture__maker {
     color: @white;
+  }
+
+  .picture__like {
+    left: -32px;
+
+    path {
+      fill: @white;
+    }
   }
 }
