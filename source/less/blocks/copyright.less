@@ -14,6 +14,19 @@
   top: 4px;
 }
 
+.copyright__link {
+  position: relative;
+  top: 3px;
+}
+
+.copyright__link:hover path {
+  fill: @half-baked;
+}
+
+.copyright__link:active path {
+  fill: fade(@black, 30%);
+}
+
 @media (min-width: @tablet-width) {
   .copyright {
     margin-left: auto;

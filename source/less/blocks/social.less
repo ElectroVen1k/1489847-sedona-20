@@ -24,6 +24,18 @@
   background-color: @half-baked;
   justify-content: center;
   align-items: center;
+
+  &:hover {
+    background-color: @fountain-blue;
+  }
+
+  &:active {
+    background-color: @steel-blue;
+  }
+}
+
+.social__link:active path {
+  fill: fade(@white, 30%);
 }
 
 @media (min-width: @tablet-width) {

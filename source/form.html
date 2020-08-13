@@ -8,33 +8,39 @@
   </head>
   <body class="page__body">
     <header class="header">
-      <nav class="main-nav">
-        <a href="index.html">
-          <img class="main-nav__logo" src="" width="102" height="84" alt="Логотип Седона">
-        </a>
-        <button type="button" class="main-nav__toggle" aria-label="Переключение меню"></button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="index.html">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="photo.html">Фото и видео</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link">Форма отзыва</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="">Html Academy</a>
-          </li>
-        </ul>
+      <nav class="main-nav main-nav--opened">
+          <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="photo.html">Фото и видео</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--active">Форма отзыва</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="">Html Academy</a>
+            </li>
+            <li class="main-nav__item main-nav__item--logo">
+              <a class="main-nav__link main-nav__link--logo" href="index.html">
+                <img class="main-nav__logo" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип Седона">
+              </a>
+            </li>
+          </ul>
+          <button type="button" class="main-nav__toggle" aria-label="Переключение меню"></button>
+        </div>
       </nav>
     </header>
     <main class="main-form">
-      <img class="main-form__picture" src="" width="902" height="214" alt="Прекрасный вид Седоны">
+      <div class="main-form__picture">
+        <div class="main-form__svg-text"></div>
+      </div>
       <h1 class="main-form__title">Оставьте свой отзыв</h1>
-      <p class="main-form__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещённых вами достопримечательностях</p>
+      <p class="main-form__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них,<br> а также о посещённых вами достопримечательностях</p>
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
-        <fieldset class="form__section fieldset">
+        <fieldset class="form__section fieldset fieldset--person">
           <legend class="fieldset__title">Представьтесь:</legend>
           <div class="fieldset__item">
             <label class="fieldset__label" for="first-name" >Имя*:</label>
@@ -49,57 +55,57 @@
             <input class="fieldset__input" type="text" name="Отчество" id="father-name" placeholder="Александрович">
           </div>
         </fieldset>
-        <fieldset class="form__section fieldset">
+        <fieldset class="form__section fieldset fieldset--contact">
           <legend class="fieldset__title">Контактная информация:</legend>
           <div class="fieldset__flex-wrapper--contact">
             <div class="fieldset__item">
-              <label class="fieldset__label" for="phone-number">Контактный телефон*:</label>
+              <label class="fieldset__label fieldset__label--phone" for="phone-number"><span>Контактный</span> телефон*:</label>
               <input class="fieldset__input" type="tel" id="" placeholder="Введите телефон" name="Номер телефона" >
             </div>
             <div class="fieldset__item">
-              <label class="fieldset__label" for="e-mail">Электронная почта*:</label>
+              <label class="fieldset__label fieldset__label--mail" for="e-mail">Электронная почта*:</label>
               <input class="fieldset__input" type="email" id="e-mail" placeholder="Введите e-mail" name="e-mail">
             </div>
           </div>
         </fieldset>
-        <fieldset class="form__section fieldset">
+        <fieldset class="form__section fieldset fieldset--impression">
           <legend class="fieldset__title">Ваше общее впечатление:</legend>
           <div class="fieldset__item">
-            <input class="fieldset__input fieldset__input--radio" type="radio" id="positiv" name="Общее впечатление" value="Скорее положителное" checked>
-            <label class="fieldset__label fieldset__label--radio" for="positiv">Скорее положителное</label>
+            <input class="fieldset__input fieldset__input--radio visually-hidden" type="radio" id="positiv" name="Общее впечатление" value="Скорее положителное" checked>
+            <label class="fieldset__label fieldset__label--radio" for="positiv">Скорее положительное</label>
           </div>
           <div class="fieldset__item">
-            <input class="fieldset__input fieldset__input--radio" type="radio" id="negativ" name="Общее впечатление" value="Скорее отрицателное">
-            <label class="fieldset__label fieldset__label--radio" for="negativ">Скорее отрицателное</label>
+            <input class="fieldset__input fieldset__input--radio visually-hidden" type="radio" id="negativ" name="Общее впечатление" value="Скорее отрицателное">
+            <label class="fieldset__label fieldset__label--radio" for="negativ">Скорее отрицательное</label>
           </div>
           <div class="fieldset__item">
-            <input class="fieldset__input fieldset__input--radio" type="radio" id="difficult-to-answer" name="Общее впечатление" value="Затрудняюсь ответить">
+            <input class="fieldset__input fieldset__input--radio visually-hidden" type="radio" id="difficult-to-answer" name="Общее впечатление" value="Затрудняюсь ответить">
             <label class="fieldset__label fieldset__label--radio" for="difficult-to-answer">Затрудняюсь ответить</label>
           </div>
         </fieldset>
-        <fieldset class="form__section fieldset">
-          <legend class="fieldset__title">Посещенные достопримечательности:</legend>
+        <fieldset class="form__section fieldset fieldset--showplace">
+          <legend class="fieldset__title">Посещенные<br> достопримечательности:</legend>
           <div class="fieldset__flex-wrapper--showplace">
             <div class="fieldset__item">
-              <input class="fieldset__input fieldset__input--check" type="checkbox" id="devil-bridge" name="Мост дьявола" checked>
+              <input class="fieldset__input fieldset__input--check visually-hidden" type="checkbox" id="devil-bridge" name="Мост дьявола" checked>
               <label class="fieldset__label fieldset__label--check" for="devil-bridge">Мост Дьявола</label>
             </div>
             <div class="fieldset__item">
-              <input class="fieldset__input fieldset__input--check" type="checkbox" id="mountain-bell" name="Гора-Колокол" checked>
+              <input class="fieldset__input fieldset__input--check visually-hidden" type="checkbox" id="mountain-bell" name="Гора-Колокол" checked>
               <label class="fieldset__label fieldset__label--check" for="mountain-bell">Гора-Колокол</label>
             </div>
             <div class="fieldset__item">
-              <input class="fieldset__input fieldset__input--check" type="checkbox" id="slaid-park" name="Слайд-парк" checked>
+              <input class="fieldset__input fieldset__input--check visually-hidden" type="checkbox" id="slaid-park" name="Слайд-парк" checked>
               <label class="fieldset__label fieldset__label--check" for="slaid-park">Слайд-парк</label>
             </div>
             <div class="fieldset__item">
-              <input class="fieldset__input fieldset__input--check" type="checkbox" id="red-roks" name="Красные скалы">
+              <input class="fieldset__input fieldset__input--check visually-hidden" type="checkbox" id="red-roks" name="Красные скалы">
               <label class="fieldset__label fieldset__label--check" for="red-roks">Красные скалы</label>
             </div>
           </div>
         </fieldset>
-        <fieldset class="form__section fieldset">
-          <legend class="fieldset__title">Опишите ваши эмоции:</legend>
+        <fieldset class="form__section fieldset fieldset--emotion">
+          <legend class="fieldset__title">Опишите свои эмоции:</legend>
           <textarea class="fieldset__input fieldset__input--textarea" name="Эмоции" id="emotion" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
         <div class="form__footer">
@@ -114,24 +120,36 @@
       <ul class="footer__social social">
         <li class="social__item">
           <a class="social__link" href="" aria-label="Страница в Твиттере">
-            <img src="img/icon-twitter.svg" width="18" height="15" alt="">
+            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
+              <g id="W6EeEF_1_">
+                <g>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.484,3.074,0.264,3.685,1.15 c0.694-0.225,1.372-0.47,2.072-0.69c-0.004,0.841-0.538,1.478-0.883,1.728C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.977-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.319,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.655,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.788,11.283,0.153z" fill="#ffffff"/>
+                </g>
+              </g>
+            </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link" href="" aria-label="Страница на FaceBook">
-            <img src="img/icon-facebook.svg" width="9" height="19" alt="">
+            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
+              <path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114 H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787 C5.765,5.069,5.75,3.709,6.275,3.356z" fill="#ffffff"/>
+            </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link" href="" aria-label="Канал на YouTube">
-            <img src="img/icon-youtube.svg" width="20" height="14" alt="">
+            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
+              <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835 C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z" fill="#ffffff"/>
+            </svg>
           </a>
         </li>
       </ul>
       <div class="footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__logo" src="img/logo-htmlacademy.svg" width="26" height="34" alt="Html Academy">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+            <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
+          </svg>
         </a>
       </div>
     </footer>
