@@ -28,6 +28,10 @@
   width: 100%;
   height: 157px;
   position: relative;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/bg-back-mobile@2x.jpg");
+  }
 }
 
 .main-form__picture::after {
@@ -74,6 +78,11 @@
 
   .main-form__picture {
     height: 290px;
+    background-image: url("../../img/bg-back-tablet@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/bg-back-tablet@2x.jpg");
+    }
   }
 
   .main-form__svg-text {
@@ -88,6 +97,11 @@
 
   .main-form__picture {
     height: 300px;
+    background-image: url("../../img/bg-back-desktop@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/bg-back-desktop@2x.jpg");
+    }
   }
 
   .main-form__title {

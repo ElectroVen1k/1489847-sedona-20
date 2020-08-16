@@ -25,7 +25,11 @@
             </li>
             <li class="main-nav__item main-nav__item--logo">
               <a class="main-nav__link main-nav__link--logo" href="index.html">
-                <img class="main-nav__logo" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип Седона">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+                  <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+                  <img class="main-nav__logo" src="img/logo-sedona-mobile.svg" alt="Логотип Седона">
+                </picture>
               </a>
             </li>
           </ul>
@@ -46,7 +50,11 @@
           <li class="pictures__item picture">
             <figure class="picture__content">
               <a class="picture__link-photo" href="">
-                <img class="picture__photo" src="img\photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Шоссе, уходящее в закат">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
+                  <img class="picture__photo" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" width="280" height="280" alt="Шоссе, уходящее в закат">
+                </picture>
               </a>
               <figcaption class="picture__text">
                 <p class="picture__name">Неродные просторы <br>
@@ -70,7 +78,11 @@
           <li class="pictures__item picture">
             <figure class="picture__content">
               <a class="picture__link-photo" href="">
-                <img class="picture__photo" src="img\photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Необычные кактусы">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+                  <img class="picture__photo" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" width="280" height="280" alt="Необычные кактусы">
+                </picture>
               </a>
               <figcaption class="picture__text">
                 <p class="picture__name">Местная растительность<br>
@@ -94,7 +106,11 @@
           <li class="pictures__item picture">
             <figure class="picture__content">
               <a class="picture__link-photo" href="">
-                <img class="picture__photo" src="img\photo-roads-mobile@1x.jpg" width="280" height="280" alt="Вид на серпантин">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
+                  <img class="picture__photo" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" width="280" height="280" alt="Вид на серпантин">
+                </picture>
               </a>
               <figcaption class="picture__text picture__text--another">
                 <p class="picture__name">Дорога на север<br>
@@ -118,7 +134,11 @@
           <li class="pictures__item picture">
             <figure class="picture__content">
               <a class="picture__link-photo" href="">
-                <img class="picture__photo" src="img\photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Мост дьявола">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+                  <img class="picture__photo" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" width="280" height="280" alt="Мост дьявола">
+                  </picture>
               </a>
               <figcaption class="picture__text">
                 <p class="picture__name">Мост дьявола<br>
@@ -143,9 +163,12 @@
       </section>
       <section class="main-photo__video video-presentation">
         <h2 class="video-presentation__title">Все еще сомневаетесь?</h2>
-        <p class="video-presentation__text">Смотрите видео презентацию и скорее за билетами, пока они<br> не подорожали в очередной раз!</p>
-        <div class="video-presentation__video" >
-          <img class="video-presentation__picture" src="img\video-mobile@1x.jpg" alt="">
+        <p class="video-presentation__text">Смотрите видеопрезентацию и скорее за билетами, пока они<br> не подорожали в очередной раз!</p>
+        <div class="video-presentation__video">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+            <img class="video-presentation__picture" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="">
           <div class="video-presentation__player player">
             <div class="player__progress-bar"></div>
             <div class="player__button player__button--replay">

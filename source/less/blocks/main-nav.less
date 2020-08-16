@@ -64,7 +64,7 @@
 .main-nav__logo {
   margin: 0 auto;
   position: relative;
-  top: 13px;
+  top: 20px;
   z-index: 3;
 }
 
@@ -196,6 +196,10 @@
     align-items: center;
   }
 
+  .main-nav__logo {
+    top: 18px;
+  }
+
   .main-nav__toggle {
     display: none;
   }
@@ -210,5 +214,11 @@
 
   .main-nav__item--logo {
     order: -1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__logo {
+    top: 24px;
   }
 }
