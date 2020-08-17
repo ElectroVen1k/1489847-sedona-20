@@ -25,7 +25,11 @@
             </li>
             <li class="main-nav__item main-nav__item--logo">
               <a class="main-nav__link main-nav__link--logo">
-                <img class="main-nav__logo" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип Седона">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+                  <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+                  <img class="main-nav__logo" src="img/logo-sedona-mobile.svg" alt="Логотип Седона">
+                </picture>
               </a>
             </li>
           </ul>
@@ -50,7 +54,11 @@
               <p class="reasons__description"><span class="reasons__number">— №1 —</span> <br>
               Седона не аттракцион для туристов,<br class="br-desktop"> там течет своя жизнь</p>
             </div>
-            <img class="reasons__picture" src="img\main-city-mobile@1x.jpg" width="520" height="260" alt="Седона изнутри">
+            <picture class="reasons__picture-wrapper">
+              <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
+              <img class="reasons__picture" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" width="520" height="260" alt="Седона изнутри">
+            </picture>
             <ul class="reasons__features features">
               <li class="features__item features__item--house">
                 <h4 class="features__title features__title--house">Жильё</h4>
@@ -72,7 +80,11 @@
               <p class="reasons__description"><span class="reasons__number">— №2 —</span><br>
               Да, по нему можно пройти!<br class="br-desktop"> Если вы осмелитесь, конечно</p>
             </div>
-            <img class="reasons__picture" src="img\main-bridge-mobile@1x.jpg" width="520" height="260" alt="Скалы седоны">
+            <picture  class="reasons__picture-wrapper">
+              <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
+              <img class="reasons__picture" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" width="520" height="260" alt="Скалы седоны">
+            </picture>
           </li>
           <li class="reasons__item reasons__item--area">
               <div class="reasons__text">
@@ -103,7 +115,11 @@
         <button class="find-hostel__button" type="button">Найти гостиницу</button>
       </article>
       <div class="main__map map">
-        <img class="map__picture" src="img\bg-map-mobile@1x.jpg" width="320" height="350" alt="Седона, штат Аризона">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+          <img class="map__picture" src="img\bg-map-mobile@1x.jpg" srcset="img\bg-map-mobile@2x.jpg 2x" width="320" height="350" alt="Седона, штат Аризона">
+        </picture>
       </div>
     </main>
     <footer class="footer">
