@@ -48,18 +48,15 @@
   right: 23px;
 }
 
-.player__button path,
-.player__button polygon {
+.player__button .player__svg {
   fill: @shuttle-gray;
 }
 
-.player__button:hover path,
-.player__button:hover polygon {
+.player__button:hover .player__svg {
   fill: @mine-shaft;
 }
 
-.player__button:active path,
-.player__button:active polygon {
+.player__button:active .player__svg {
   fill: fade(@mine-shaft, 30%);
 }
 
@@ -97,18 +94,15 @@
     right: 41px;
   }
 
-  .player__button path,
-  .player__button polygon {
+  .player__button .player__svg {
     fill: @white;
   }
 
-  .player__button:hover path,
-  .player__button:hover polygon {
+  .player__button:hover .player__svg {
     fill: fade(@white, 60%);
   }
 
-  .player__button:active path,
-  .player__button:active polygon {
+  .player__button:active .player__svg {
     fill: fade(@white, 30%);
   }
 }
