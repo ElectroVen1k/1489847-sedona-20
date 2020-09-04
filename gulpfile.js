@@ -10,7 +10,10 @@ const del = require("del");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
-const svgstore = require('gulp-svgstore');
+const svgstore = require("gulp-svgstore");
+const htmlmin = require("gulp-htmlmin");
+const uglify = require('gulp-uglify');
+const pipeline = require('readable-stream').pipeline;
 // Styles
 const styles = () => {
   return gulp.src("source/less/style.less")
@@ -59,9 +62,7 @@ exports.clean = clean;
 const copy = () => {
   return gulp.src([
       "source/img/**",
-      "source/js/**/*.js",
-      "source/fonts/**/*.{woff,woff2}",
-      "source/*.html"
+      "source/fonts/**/*.{woff,woff2}"
     ], {
       base: "source"
     })
@@ -83,11 +84,27 @@ const sprite = () => {
     .pipe(gulp.dest("build/img"));
 };
 exports.sprite = sprite;
+//Html
+const html = () => {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"));
+};
+exports.html = html;
+//JS
+const js = () => {
+  return gulp.src('source/js/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('build/js'));
+};
+exports.js = js;
 //Build
 const build = gulp.series(
   clean,
   copy,
   sprite,
-  styles
+  styles,
+  html,
+  js
 );
 exports.build = build;
