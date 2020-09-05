@@ -47,8 +47,9 @@
       </symbol>
     </svg>
     <header class="header">
-      <nav class="main-nav main-nav--opened">
-          <div class="main-nav__wrapper">
+      <!-- Классы "main-nav--opened" и "main-nav--closed" переключают состояния меню. Класс "no-js" обеспечивает работоспособность меню при отсутствии JavaScript. -->
+      <nav class="main-nav main-nav--closed no-js">
+        <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link main-nav__link--active">Главная</a>
@@ -205,5 +206,6 @@
         </a>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
