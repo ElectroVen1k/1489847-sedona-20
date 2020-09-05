@@ -49,6 +49,7 @@
   .fieldset__item {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   .fieldset__input {
@@ -57,6 +58,7 @@
     padding-left: 18px;
     padding-top: 0;
     box-sizing: border-box;
+    width: 150px;
   }
 }
 
@@ -71,9 +73,28 @@
     margin-top: 13px;
     display: flex;
     flex-direction: column;
+    position: relative;
 
     &:nth-child(1) {
       margin-top: 0;
+    }
+
+    &::after {
+      content: "";
+      width: 58px;
+      height: 58px;
+      background-color: @mercury-dark;
+      background-image: url("../../img/icon-mail.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+    }
+
+    &--phone::after {
+      background-image: url("../../img/icon-phone.svg");
     }
   }
 
@@ -86,6 +107,7 @@
     padding-left: 18px;
     padding-top: 2px;
     box-sizing: border-box;
+    position: relative;
   }
 
   .fieldset__label--phone {
