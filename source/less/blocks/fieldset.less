@@ -84,7 +84,7 @@
       width: 58px;
       height: 58px;
       background-color: @mercury-dark;
-      background-image: url("../../img/icon-mail.svg");
+      background-image: url("../img/icon-mail.svg");
       background-repeat: no-repeat;
       background-position: 50% 50%;
       position: absolute;
@@ -94,7 +94,7 @@
     }
 
     &--phone::after {
-      background-image: url("../../img/icon-phone.svg");
+      background-image: url("../img/icon-phone.svg");
     }
   }
 
@@ -211,7 +211,7 @@
   height: 16px;
   top: 3px;
   left: -62px;
-  background-image: url("../../img/icon-tick.svg");
+  background-image: url("../img/icon-tick.svg");
 }
 
 .fieldset__label--radio::before {
@@ -244,6 +244,13 @@
 .fieldset__label--radio:active::before,
 .fieldset__label--check:active::before {
   background-color: @alto-light;
+}
+
+.fieldset__input--radio:focus + .fieldset__label--radio::before,
+.fieldset__input--check:focus + .fieldset__label--check::before {
+  background-color: @mercury;
+  border: 1px solid @black;
+  box-sizing: border-box;
 }
 
 .fieldset__input--radio:checked + .fieldset__label--radio:active::after {
@@ -439,12 +446,15 @@
   }
 
   .fieldset--contact {
+    margin-bottom: 0px;
+
     .fieldset__item {
       width: 50%;
       display: flex;
       flex-direction: row;
       align-items: center;
       margin: 0;
+      margin-bottom: 28px;
 
       &:nth-child(odd) {
         width: calc(50% - 80px);
@@ -481,10 +491,12 @@
 
   .fieldset__flex-wrapper--contact {
     display: flex;
+    flex-wrap: wrap;
   }
 
   .fieldset__flex-wrapper--showplace {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-left: 63px;
     margin-right: 3px;
