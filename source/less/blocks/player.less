@@ -30,6 +30,11 @@
   z-index: 2;
 }
 
+.player__button {
+  background-color: transparent;
+  border: none;
+}
+
 .player__button--replay {
   position: absolute;
   top: 67px;
@@ -98,7 +103,8 @@
     fill: @white;
   }
 
-  .player__button:hover .player__svg {
+  .player__button:hover .player__svg,
+  .player__button:focus .player__svg {
     fill: fade(@white, 60%);
   }
 

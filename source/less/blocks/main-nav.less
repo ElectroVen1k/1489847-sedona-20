@@ -147,6 +147,16 @@
   .main-nav--closed .main-nav__item--logo {
     display: block;
   }
+
+  .no-js .main-nav__toggle,
+  .no-js .main-nav__toggle::after,
+  .no-js .main-nav__toggle::before {
+    display: none;
+  }
+
+  .no-js .main-nav__item {
+    display: block;
+  }
 }
 
 @media (min-width: @tablet-width) {
