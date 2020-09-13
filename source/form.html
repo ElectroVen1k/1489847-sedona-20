@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
   </head>
-  <body class="page__body">
+  <body>
     <svg style="display: none;">
       <symbol id="icon-facebook">
         <path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114 H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787 C5.765,5.069,5.75,3.709,6.275,3.356z"/>
@@ -45,7 +47,8 @@
       </symbol>
     </svg>
     <header class="header">
-      <nav class="main-nav main-nav--opened">
+      <!-- Классы "main-nav--opened" и "main-nav--closed" переключают состояния меню. Класс "no-js" обеспечивает работоспособность меню при отсутствии JavaScript. -->
+      <nav class="main-nav main-nav--closed no-js">
           <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -79,7 +82,7 @@
         <div class="main-form__svg-text"></div>
       </div>
       <h1 class="main-form__title">Оставьте свой отзыв</h1>
-      <p class="main-form__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них,<br> а также о посещённых вами достопримечательностях</p>
+      <p class="main-form__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещённых вами достопримечательностях</p>
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="form__section fieldset fieldset--person">
           <legend class="fieldset__title">Представьтесь:</legend>
@@ -98,12 +101,12 @@
         </fieldset>
         <fieldset class="form__section fieldset fieldset--contact">
           <legend class="fieldset__title">Контактная информация:</legend>
-          <div class="fieldset__flex-wrapper--contact">
-            <div class="fieldset__item">
+          <div class="fieldset__flex-wrapper fieldset__flex-wrapper--contact">
+            <div class="fieldset__item fieldset__item--phone">
               <label class="fieldset__label fieldset__label--phone" for="phone-number"><span>Контактный</span> телефон*:</label>
               <input class="fieldset__input" type="tel" id="phone-number" placeholder="Введите телефон" name="Номер телефона" >
             </div>
-            <div class="fieldset__item">
+            <div class="fieldset__item fieldset__item--email">
               <label class="fieldset__label fieldset__label--mail" for="e-mail">Электронная почта*:</label>
               <input class="fieldset__input" type="email" id="e-mail" placeholder="Введите e-mail" name="e-mail">
             </div>
@@ -125,8 +128,8 @@
           </div>
         </fieldset>
         <fieldset class="form__section fieldset fieldset--showplace">
-          <legend class="fieldset__title">Посещенные<br> достопримечательности:</legend>
-          <div class="fieldset__flex-wrapper--showplace">
+          <legend class="fieldset__title">Посещенные достопримечательности:</legend>
+          <div class="fieldset__flex-wrapper fieldset__flex-wrapper--showplace">
             <div class="fieldset__item">
               <input class="fieldset__input fieldset__input--check visually-hidden" type="checkbox" id="devil-bridge" name="Мост дьявола" checked>
               <label class="fieldset__label fieldset__label--check" for="devil-bridge">Мост Дьявола</label>
@@ -162,21 +165,21 @@
       <ul class="footer__social social">
         <li class="social__item">
           <a class="social__link" href="" aria-label="Страница в Твиттере">
-            <svg class="social__svg" x="0" y="0" width="17.5" height="14.663" viewBox="0 0 17.5 14.663">
+            <svg class="social__svg" x="0" y="0" width="17" height="14" viewBox="0 0 17 14">
               <use xlink:href="#icon-twitter"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link" href="" aria-label="Страница на FaceBook">
-            <svg class="social__svg" x="0" y="0" width="8.672" height="18.944" viewBox="0 0 8.672 18.944">
+            <svg class="social__svg" x="0" y="0" width="8" height="18" viewBox="0 0 8 18">
               <use xlink:href="#icon-facebook"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link" href="" aria-label="Канал на YouTube">
-            <svg class="social__svg" x="0" y="0" width="19.979" height="14.015" viewBox="0 0 19.979 14.015">
+            <svg class="social__svg" x="0" y="0" width="19" height="14" viewBox="0 0 19 14">
               <use xlink:href="#icon-youtube"></use>
             </svg>
           </a>
@@ -184,22 +187,23 @@
       </ul>
       <div class="footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="copyright-logo" x="0" y="0" width="26.943" height="34.09" viewBox="0 0 26.943 34.09">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HtmlAcademy">
+          <svg class="copyright-logo" x="0" y="0" width="26" height="34" viewBox="0 0 26.5 34">
             <use xlink:href="#htmlacademy-logo"></use>
           </svg>
         </a>
       </div>
     </footer>
     <div class="fail-popup">
-      <h2 class="fail-popup__title">Что-то пошла не так!</h2>
+      <h2 class="fail-popup__title">Что-то пошло не так!</h2>
       <p class="fail-popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
       <button class="fail-popup__button" type="button">Ок</button>
     </div>
     <div class="success-popup">
       <h2 class="success-popup__title">Ваш отзыв отправлен!</h2>
-      <p class="success-popup__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+      <p class="success-popup__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br> В ближайшее время мы опубликуем его на сайте.</p>
       <button class="success-popup__button" type="button">Закрыть окно</button>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>

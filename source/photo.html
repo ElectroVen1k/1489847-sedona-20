@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
   </head>
-  <body class="page__body">
+  <body>
     <svg style="display: none;">
       <symbol id="icon-facebook">
         <path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114 H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787 C5.765,5.069,5.75,3.709,6.275,3.356z"/>
@@ -45,7 +47,8 @@
       </symbol>
     </svg>
     <header class="header">
-      <nav class="main-nav main-nav--opened">
+      <!-- Классы "main-nav--opened" и "main-nav--closed" переключают состояния меню. Класс "no-js" обеспечивает работоспособность меню при отсутствии JavaScript. -->
+      <nav class="main-nav main-nav--opened no-js">
           <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -188,7 +191,7 @@
       </section>
       <section class="main-photo__video video-presentation">
         <h2 class="video-presentation__title">Все еще сомневаетесь?</h2>
-        <p class="video-presentation__text">Смотрите видеопрезентацию и скорее за билетами, пока они<br> не подорожали в очередной раз!</p>
+        <p class="video-presentation__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         <div class="video-presentation__video">
           <picture>
             <source type="image/webp" media="(min-width: 1200px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
@@ -200,21 +203,22 @@
           </picture>
           <div class="video-presentation__player player">
             <div class="player__progress-bar"></div>
-            <div class="player__button player__button--replay">
+            <button type="button" class="player__button player__button--slider" aria-label="Позлунок времени"></button>
+            <button type="button" class="player__button player__button--replay" aria-label="Повтор видео">
               <svg class="player__svg" x="0" y="0" width="16" height="20" viewBox="0 0 16 20">
                 <use xlink:href="#video-replay"></use>
               </svg>
-            </div>
-            <div class=" player__button player__button--subtitle">
+            </button>
+            <button type="button" class="player__button player__button--subtitle" aria-label="Субтитры">
               <svg class="player__svg" x="0" y="0" width="32" height="20" viewBox="0 0 32 20">
                 <use xlink:href="#video-subtitles"></use>
               </svg>
-            </div>
-            <div class="player__button player__button--fullscreen">
+            </button>
+            <button type="button" class="player__button player__button--fullscreen" aria-label="Полноэкранный режим">
               <svg class="player__svg" x="0" y="0" width="20" height="20" viewBox="0 0 20 20">
                 <use xlink:href="#video-fullscreen"></use>
               </svg>
-            </div>
+            </button>
           </div>
         </div>
       </section>
@@ -224,21 +228,21 @@
       <ul class="footer__social social">
         <li class="social__item">
           <a class="social__link" href="" aria-label="Страница в Твиттере">
-            <svg class="social__svg" x="0" y="0" width="17.5" height="14.663" viewBox="0 0 17.5 14.663">
+            <svg class="social__svg" x="0" y="0" width="17" height="14" viewBox="0 0 17 14">
               <use xlink:href="#icon-twitter"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link" href="" aria-label="Страница на FaceBook">
-            <svg class="social__svg" x="0" y="0" width="8.672" height="18.944" viewBox="0 0 8.672 18.944">
+            <svg class="social__svg" x="0" y="0" width="8" height="18" viewBox="0 0 8 18">
               <use xlink:href="#icon-facebook"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link" href="" aria-label="Канал на YouTube">
-            <svg class="social__svg" x="0" y="0" width="19.979" height="14.015" viewBox="0 0 19.979 14.015">
+            <svg class="social__svg" x="0" y="0" width="19" height="14" viewBox="0 0 19 14">
               <use xlink:href="#icon-youtube"></use>
             </svg>
           </a>
@@ -246,12 +250,13 @@
       </ul>
       <div class="footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="copyright-logo" x="0" y="0" width="26.943" height="34.09" viewBox="0 0 26.943 34.09">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HtmlAcademy">
+          <svg class="copyright-logo" x="0" y="0" width="26" height="34" viewBox="0 0 26.5 34">
             <use xlink:href="#htmlacademy-logo"></use>
           </svg>
         </a>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

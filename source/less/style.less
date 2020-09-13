@@ -1,24 +1,4 @@
-/* pt-sans-regular - latin_cyrillic */
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: local("PT Sans"),
-    local("PTSans-Regular"),
-    url("../fonts/ptsans.woff2") format("woff2"), /* Super Modern Browsers */
-    url("../fonts/ptsans.woff") format("woff"); /* Modern Browsers */
-}
-/* pt-sans-700 - latin_cyrillic */
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: local("PT Sans Bold"),
-    local("PTSans-Bold"),
-    url("../fonts/ptsansbold.woff2") format("woff2"), /* Super Modern Browsers */
-    url("../fonts/ptsansbold.woff") format("woff"); /* Modern Browsers */
-}
-
+@import "fonts.less";
 @import "blocks/main-nav.less";
 @import "blocks/intro.less";
 @import "blocks/reasons.less";
@@ -29,15 +9,15 @@
 @import "blocks/pictures.less";
 @import "blocks/picture.less";
 @import "blocks/find-hostel.less";
-@import "blocks/variables.less";
+@import "variables.less";
 @import "blocks/video-presentation.less";
 @import "blocks/main-form.less";
 @import "blocks/fieldset.less";
-@import "blocks/global.less";
+@import "global.less";
 @import "blocks/form.less";
 @import "blocks/success-popup.less";
 @import "blocks/fail-popup.less";
-@import "blocks/mixins.less";
+@import "mixins.less";
 @import "blocks/copyright.less";
 @import "blocks/map.less";
 @import "blocks/player.less";

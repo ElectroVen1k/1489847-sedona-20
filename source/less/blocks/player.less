@@ -6,6 +6,10 @@
   bottom: 45px;
   margin-bottom: -111px;
   border-bottom: 66px solid @concrete;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .player__progress-bar {
@@ -13,39 +17,39 @@
   width: 235px;
   background-color: fade(@white, 20%);
   position: relative;
-  left: 22px;
-  top: 22px;
+  margin: 21px 22.5px;
 }
 
-.player__progress-bar::after {
-  content: "";
+.player__button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.player__button--slider {
   display: block;
   width: 9px;
   height: 9px;
   border-radius: 50%;
   background-color: @white;
-  position: relative;
-  top: -3px;
-  left: 36px;
-  z-index: 2;
+  position: absolute;
+  left: 56px;
 }
 
 .player__button--replay {
-  position: absolute;
-  top: 67px;
-  left: 25px;
+  margin-left: 19px;
+  margin-top: 22px;
 }
 
 .player__button--subtitle {
-  position: absolute;
-  top: 68px;
-  right: 74px;
+  margin-left: auto;
+  margin-top: 22px;
 }
 
 .player__button--fullscreen {
-  position: absolute;
-  top: 68px;
-  right: 23px;
+  margin-right: 16px;
+  margin-left: 17px;
+  margin-top: 22px;
 }
 
 .player__button .player__svg {
@@ -71,34 +75,34 @@
 
   .player__progress-bar {
     width: 389px;
-    top: 45px;
-    left: 93px;
+    flex-shrink: 0;
+    margin: 0;
   }
 
-  .player__progress-bar::after {
-    left: 113px;
+  .player__button--slider {
+    left: 204px;
+  }
+
+  .player__button {
+    margin-top: 0;
   }
 
   .player__button--replay {
-    top: 35px;
-    left: 35px;
-  }
-
-  .player__button--subtitle {
-    top: 36px;
-    right: 92px;
+    order: -1;
+    margin-left: 29px;
+    margin-right: 36px;
   }
 
   .player__button--fullscreen {
-    top: 36px;
-    right: 41px;
+    margin-right: 34px;
   }
 
   .player__button .player__svg {
     fill: @white;
   }
 
-  .player__button:hover .player__svg {
+  .player__button:hover .player__svg,
+  .player__button:focus .player__svg {
     fill: fade(@white, 60%);
   }
 

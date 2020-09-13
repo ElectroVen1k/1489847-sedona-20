@@ -16,12 +16,13 @@
   line-height: 24px;
   color: @mine-shaft;
   text-align: center;
-  margin: 0;
+  margin: 0 auto;
   margin-top: 28px;
+  max-width: 300px;
 }
 
 .main-form__picture {
-  background-image: url("../../img/bg-back-mobile@1x.jpg");
+  background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -30,13 +31,13 @@
   position: relative;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/bg-back-mobile@2x.jpg");
+    background-image: url("../img/bg-back-mobile@2x.jpg");
   }
 }
 
 .main-form__picture::after {
   content: "";
-  background-image: url("../../img/bg-intro-triangle-desktop.svg");
+  background-image: url("../img/bg-intro-triangle-desktop.svg");
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
@@ -48,17 +49,11 @@
 }
 
 .main-form__svg-text {
-  background-image: url("../../img/text-sedona-mobile.svg");
+  background-image: url("../img/text-sedona-mobile.svg");
   background-repeat: no-repeat;
   background-position: center;
   height: 90%;
   width: 100%;
-}
-
-@media (max-width: @mobile-width) {
-  .main-form__text br {
-    display: none;
-  }
 }
 
 @media (min-width: @tablet-width) {
@@ -74,19 +69,20 @@
   .main-form__text {
     margin-top: 33px;
     margin-bottom: 67px;
+    max-width: 440px;
   }
 
   .main-form__picture {
     height: 290px;
-    background-image: url("../../img/bg-back-tablet@1x.jpg");
+    background-image: url("../img/bg-back-tablet@1x.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/bg-back-tablet@2x.jpg");
+      background-image: url("../img/bg-back-tablet@2x.jpg");
     }
   }
 
   .main-form__svg-text {
-    background-image: url("../../img/text-sedona.svg");
+    background-image: url("../img/text-sedona.svg");
   }
 }
 
@@ -97,10 +93,10 @@
 
   .main-form__picture {
     height: 300px;
-    background-image: url("../../img/bg-back-desktop@1x.jpg");
+    background-image: url("../img/bg-back-desktop@1x.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/bg-back-desktop@2x.jpg");
+      background-image: url("../img/bg-back-desktop@2x.jpg");
     }
   }
 

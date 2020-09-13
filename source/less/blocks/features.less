@@ -24,7 +24,7 @@
 
 .features__title--house::after {
   content: "";
-  background-image: url("../../img/icon-house.svg");
+  background-image: url("../img/icon-house.svg");
   width: 39px;
   height: 37px;
   top: -8px;
@@ -37,7 +37,7 @@
 
 .features__title--gift::after {
   content: "";
-  background-image: url("../../img/icon-gift.svg");
+  background-image: url("../img/icon-gift.svg");
   width: 32px;
   height: 38px;
   top: -10px;
@@ -50,7 +50,7 @@
 
 .features__title--food::after {
   content: "";
-  background-image: url("../../img/icon-burger.svg");
+  background-image: url("../img/icon-burger.svg");
   width: 40px;
   height: 35px;
   top: -5px;
@@ -78,17 +78,32 @@
 
   .features__item--house {
     order: -3;
+
+    .features__text {
+      max-width: 280px;
+      margin: 0 auto;
+    }
   }
 
   .features__item--gift {
     order: -1;
     margin: 0 30px;
+
+    .features__text {
+      max-width: 240px;
+      margin: 0 auto;
+    }
   }
 
   .features__item--food {
     order: -2;
     margin: 0 50px;
     position: relative;
+
+    .features__text {
+      max-width: 310px;
+      margin: 0 auto;
+    }
   }
 
   .features__title {
@@ -102,7 +117,7 @@
 
   .features__title--house::after {
     content: "";
-    background-image: url("../../img/icon-house.svg");
+    background-image: url("../img/icon-house.svg");
     width: 76px;
     height: 73px;
     top: -98px;
@@ -115,7 +130,7 @@
 
   .features__title--gift::after {
     content: "";
-    background-image: url("../../img/icon-gift.svg");
+    background-image: url("../img/icon-gift.svg");
     width: 63px;
     height: 75px;
     top: -101px;
@@ -128,7 +143,7 @@
 
   .features__title--food::after {
     content: "";
-    background-image: url("../../img/icon-burger.svg");
+    background-image: url("../img/icon-burger.svg");
     width: 77px;
     height: 70px;
     top: -96px;
@@ -137,11 +152,5 @@
     background-repeat: no-repeat;
     position: absolute;
     background-size: 100%;
-  }
-}
-
-@media (max-width: @tablet-width) {
-  .features__text br {
-    display: none;
   }
 }

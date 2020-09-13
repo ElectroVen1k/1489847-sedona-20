@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
   </head>
-  <body class="page__body">
+  <body>
     <svg style="display: none;">
       <symbol id="icon-facebook">
         <path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114 H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787 C5.765,5.069,5.75,3.709,6.275,3.356z"/>
@@ -45,8 +47,9 @@
       </symbol>
     </svg>
     <header class="header">
-      <nav class="main-nav main-nav--opened">
-          <div class="main-nav__wrapper">
+      <!-- Классы "main-nav--opened" и "main-nav--closed" переключают состояния меню. Класс "no-js" обеспечивает работоспособность меню при отсутствии JavaScript. -->
+      <nav class="main-nav main-nav--closed no-js">
+        <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link main-nav__link--active">Главная</a>
@@ -80,16 +83,15 @@
         <div class="intro__picture">
           <div class="intro__svg-text"></div>
         </div>
-        <h2 class="intro__title">Седона — небольшой <br class="br-mobile"> городок в Аризоне, <br> заслуживающий большего!</h2>
-        <p class="intro__text">Рассмотрим 5 причин, по которым<br class="br-mobile"> Седона круче,чем Гранд Каньон!</p>
+        <h2 class="intro__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+        <p class="intro__text">Рассмотрим 5 причин, по которым Седона круче,чем Гранд Каньон!</p>
       </section>
       <section class="main__reasons reasons">
         <ul class="reasons__list">
           <li class="reasons__item">
             <div class="reasons__text reasons__text--important reasons__text--city">
-              <h3 class="reasons__title">Настоящий<br> городок</h3>
-              <p class="reasons__description"><span class="reasons__number">— №1 —</span> <br>
-              Седона не аттракцион для туристов,<br class="br-desktop"> там течет своя жизнь</p>
+              <h3 class="reasons__title">Настоящий городок</h3>
+              <p class="reasons__description"><span class="reasons__number">— №1 —</span> Седона не аттракцион для туристов, там течет своя жизнь</p>
             </div>
             <picture class="reasons__picture-wrapper">
               <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.webp 1x, img/main-city-desktop@2x.webp 2x">
@@ -101,24 +103,24 @@
             </picture>
             <ul class="reasons__features features">
               <li class="features__item features__item--house">
-                <h4 class="features__title features__title--house">Жильё</h4>
-                <p class="features__text">Рекомендуем пожить в настоящем<br> мотеле, все как в кино!</p>
+                <h4 class="features__title features__title--house">Жилье</h4>
+                <p class="features__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
               </li>
               <li class="features__item features__item--gift">
                 <h4 class="features__title features__title--gift">Сувениры</h4>
-                <p class="features__text">Не только китайского,<br> но и местного производства!</p>
+                <p class="features__text">Не только китайского, но и местного производства!</p>
               </li>
               <li class="features__item features__item--food">
                 <h4 class="features__title features__title--food">Еда</h4>
-                <p class="features__text">Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>
+                <p class="features__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
             </ul>
           </li>
           <li class="reasons__item">
             <div class="reasons__text reasons__text--important reasons__text--bridge">
-              <h3 class="reasons__title">Там есть<br> мост дьявола</h3>
-              <p class="reasons__description"><span class="reasons__number">— №2 —</span><br>
-              Да, по нему можно пройти!<br class="br-desktop"> Если вы осмелитесь, конечно</p>
+              <h3 class="reasons__title">Там есть мост дьявола</h3>
+              <p class="reasons__description"><span class="reasons__number">— №2 —</span>
+              Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
             <picture  class="reasons__picture-wrapper">
               <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.webp 1x, img/main-bridge-desktop@2x.webp 2x">
@@ -131,22 +133,22 @@
           </li>
           <li class="reasons__item reasons__item--area">
               <div class="reasons__text">
-              <h3 class="reasons__title">Небольшая<br> площадь</h3>
-              <p class="reasons__description"><span class="reasons__number">— №3 —</span><br>
+              <h3 class="reasons__title">Небольшая площадь</h3>
+              <p class="reasons__description"><span class="reasons__number">— №3 —</span>
               Все интересные места находятся очень близко</p>
             </div>
           </li>
           <li class="reasons__item reasons__item--road">
             <div class="reasons__text">
-              <h3 class="reasons__title">Красивая<br> дорога</h3>
-              <p class="reasons__description"><span class="reasons__number">— №4 —</span><br>
+              <h3 class="reasons__title">Красивая дорога</h3>
+              <p class="reasons__description"><span class="reasons__number">— №4 —</span>
               Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </div>
           </li>
           <li class="reasons__item reasons__item--tourists">
             <div class="reasons__text">
-              <h3 class="reasons__title">Мало<br> туристов</h3>
-              <p class="reasons__description"><span class="reasons__number">— №5 —</span><br>
+              <h3 class="reasons__title">Мало туристов</h3>
+              <p class="reasons__description"><span class="reasons__number">— №5 —</span>
               Большинство едет в Гранд Каньон и толпится там</p>
             </div>
           </li>
@@ -155,7 +157,7 @@
       <article class="main__find-hostel find-hostel">
         <h2 class="find-hostel__title">Заинтересовались?</h2>
         <p class="find-hostel__text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <button class="find-hostel__button" type="button">Найти гостиницу</button>
+        <a href="" class="find-hostel__button">Найти гостиницу</a>
       </article>
       <div class="main__map map">
         <picture>
@@ -166,6 +168,7 @@
           <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
           <img class="map__picture" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" width="320" height="350" alt="Седона, штат Аризона">
         </picture>
+        <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d837322.9220729138!2d-112.04978907678577!3d34.93673650958393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1599301333522!5m2!1sru!2sru" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </div>
     </main>
     <footer class="footer">
@@ -173,21 +176,21 @@
       <ul class="footer__social social">
         <li class="social__item">
           <a class="social__link" href="" aria-label="Страница в Твиттере">
-            <svg class="social__svg" x="0" y="0" width="17.5" height="14.663" viewBox="0 0 17.5 14.663">
+            <svg class="social__svg" x="0" y="0" width="17" height="14" viewBox="0 0 17 14">
               <use xlink:href="#icon-twitter"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link" href="" aria-label="Страница на FaceBook">
-            <svg class="social__svg" x="0" y="0" width="8.672" height="18.944" viewBox="0 0 8.672 18.944">
+            <svg class="social__svg" x="0" y="0" width="8" height="18" viewBox="0 0 8 18">
               <use xlink:href="#icon-facebook"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link" href="" aria-label="Канал на YouTube">
-            <svg class="social__svg" x="0" y="0" width="19.979" height="14.015" viewBox="0 0 19.979 14.015">
+            <svg class="social__svg" x="0" y="0" width="19" height="14" viewBox="0 0 19 14">
               <use xlink:href="#icon-youtube"></use>
             </svg>
           </a>
@@ -195,12 +198,13 @@
       </ul>
       <div class="footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="copyright-logo" x="0" y="0" width="26.943" height="34.09" viewBox="0 0 26.943 34.09">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HtmlAcademy">
+          <svg class="copyright-logo" x="0" y="0" width="26" height="34" viewBox="0 0 26.5 34">
             <use xlink:href="#htmlacademy-logo"></use>
           </svg>
         </a>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
